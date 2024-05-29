@@ -39,7 +39,7 @@ cart.forEach((cartItem) => {
                 <span class="update-quantity-link link-primary">
                 Update
                 </span>
-                <span class="delete-quantity-link link-primary js-delete-link data-product-id="${matchingProduct.id}">
+                <span class="delete-quantity-link link-primary js-delete-link" data-product-id="${matchingProduct.id}">
                 Delete
                 </span>
             </div>
@@ -104,10 +104,6 @@ document.querySelectorAll('.js-delete-link')
             const productId=link.dataset.productId;
             removeFromCart(productId);
             const container=document.querySelector(`.js-cart-item-container-${productId}`);
-            if (container) {
-                container.remove();
-            } else {
-                console.warn('Element not found: span.some-class');
-            }
+            container.remove();
         });
     });

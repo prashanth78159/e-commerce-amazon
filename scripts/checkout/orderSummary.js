@@ -19,7 +19,7 @@ export function renderOrderSummary(){
         const deliveryOptionId = cartItem.deliveryOptionId;
 
         const deliveryOption = getDeliverOption(deliveryOptionId);
-
+        
         const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
         const dateString = deliveryDate.format('dddd, MMMM D');
 
